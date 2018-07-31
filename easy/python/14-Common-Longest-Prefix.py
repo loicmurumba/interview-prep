@@ -7,7 +7,7 @@ class Solution(object):
         common = ""
         if strs == []: 
             return common
-        for index in range(len(strs[0])):
+        for index in range(len(strs[0])+1):
             cur = strs[0][0:index]
             for a in strs:
                 if a[0:index] != cur:
@@ -18,4 +18,4 @@ class Solution(object):
 
 
 sol = Solution()
-print(sol.longestCommonPrefix(["aaa","a","aab"]))
+print(sol.longestCommonPrefix(["aa"]))
