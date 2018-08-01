@@ -20,17 +20,15 @@ class Solution(object):
         close_list = ["]",")","}"]
         close_b = {"[":"]","(":")","{":"}"}
         for char in s:
-            
             if char in open_b:
                 stack.push(close_b[char])
-            if char in close_list and stack.peek() == char:
+            elif char in close_list and stack.peek() == char:
                 stack.pop()
             else:
-                print(stack.peek())
-                print("here")
                 return False
         if stack.size() > 0:
             return False
+        return True
             
 sol = Solution()
-print(sol.isValid("()"))
+print(sol.isValid("{([])}{}"))
