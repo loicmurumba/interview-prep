@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
+    int removeDuplicates(std::vector<int>& nums) {
         if (nums.empty()){
             return 0;
         }
@@ -15,4 +17,4 @@ public:
         }
         return j;
     }
-};
+}
